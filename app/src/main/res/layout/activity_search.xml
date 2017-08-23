@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background"
+    android:fitsSystemWindows="true"
+    >
+
+    <include layout="@layout/view_search"
+             android:id="@+id/search_top_bar"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/search_top_bar"
+        android:id="@+id/rv_city_list"
+        />
+
+    <com.allen.onlyweather.customview.SideLetterBar
+        android:id="@+id/slb_side_bar"
+        android:layout_below="@+id/search_top_bar"
+        android:layout_width="@dimen/side_letter_bar_width"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        />
+
+    <TextView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/tv_letter_overlay"
+        android:background="@drawable/overlay_bg"
+        android:textSize="@dimen/text_size_big"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:visibility="gone"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/search_result_view"
+        android:background="@color/main_background"
+        android:layout_below="@+id/search_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        />
+
+    <include layout="@layout/view_no_result"
+
+        />
+
+</RelativeLayout>
